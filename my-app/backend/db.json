@@ -1,19 +1,19 @@
 {
   "pensamentos": [
     {
-      "id": 1,
+      "id": "1",
       "conteudo": "We are the champions my friends!!!",
       "autoria": "Queen",
       "modelo": "modelo1"
     },
     {
-      "id": 2,
+      "id": "2",
       "conteudo": "Na minha máquina funciona!",
       "autoria": "Dev da madrugada",
       "modelo": "modelo2"
     },
     {
-      "id": 3,
+      "id": "3",
       "conteudo": "Continue a codar... continue a codar...",
       "autoria": "Dory programadora",
       "modelo": "modelo3"
@@ -22,7 +22,19 @@
       "conteudo": "Testando função de editar",
       "autoria": "Angular ",
       "modelo": "modelo2",
-      "id": 4
+      "id": "4"
+    },
+    {
+      "id": "9324",
+      "conteudo": "Eu estou gostando muito de aprender angular",
+      "autoria": "antonio",
+      "modelo": "modelo1"
+    },
+    {
+      "id": "b6de",
+      "conteudo": "Icaro e Gilmar é fera demais!",
+      "autoria": "Antonio Léo Neto",
+      "modelo": "modelo3"
     }
   ]
 }
