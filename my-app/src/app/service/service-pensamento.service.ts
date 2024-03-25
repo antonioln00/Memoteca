@@ -1,6 +1,6 @@
+import { Pensamento } from './../components/pensamentos/pensamento';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Pensamento } from '../components/pensamentos/pensamento';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -17,6 +17,11 @@ export class ServicePensamentoService {
 
   criar(pensamento: Pensamento): Observable<Pensamento>{
     return this._http.post<Pensamento>(this._api, pensamento)
+  }
+
+  editar(pensamento: Pensamento): Observable<Pensamento>{
+    const url = `${this._api}/${pensamento.id}`;
+    return this._http.put<Pensamento>(url, pensamento);
   }
 
   excluir(id: number): Observable<Pensamento>{

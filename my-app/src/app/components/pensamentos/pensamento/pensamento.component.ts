@@ -15,6 +15,9 @@ export class PensamentoComponent {
     modelo: 'modelo3'
   };
 
+  ngOnInit(): void {
+  }
+
   larguraPensamento(): string{
     if(this.pensamento.conteudo.length >= 256){
       return 'pensamento-g'
