@@ -19,6 +19,24 @@ public class PensamentoController : ControllerBase
     public async Task<ActionResult<IEnumerable<Pensamento[]>>> ObterTodos() =>
         Ok(await _context.Pensamentos.ToListAsync());
 
+    [HttpGet("{id}")]
+    public async Task<ActionResult<Pensamento>> ObterPorId(int id)
+    {
+        try
+        {
+            var pensamento = await _context.Pensamentos.FindAsync(id);
+
+            if (pensamento == null)
+                return NotFound($"Pensamento de ID {id} não existe.");
+
+            return Ok(pensamento);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+
     [HttpPost()]
     public async Task<ActionResult<Pensamento>> NovoPensamento(Pensamento model)
     {
@@ -94,7 +112,7 @@ public class PensamentoController : ControllerBase
         }
         catch (Exception)
         {
-            
+
             throw;
         }
     }
